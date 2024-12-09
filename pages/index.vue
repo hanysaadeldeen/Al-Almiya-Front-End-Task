@@ -1,6 +1,7 @@
 <template lang="pug">
   div
-    homeHeroSection
+    HeroSection
+    ServiceSection
 </template>
 
 <script setup lang="ts"></script>

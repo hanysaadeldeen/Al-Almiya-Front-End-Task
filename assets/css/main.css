@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.section {
+  margin: 15rem 0;
 }
