@@ -17,6 +17,7 @@ export default {
         font: "#040404",
         background: "#003773",
         style: "#FF0000",
+        light: "#ADB3DA",
       },
     },
   },

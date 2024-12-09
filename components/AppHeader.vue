@@ -33,7 +33,7 @@
           <ion-icon name="globe-outline" class='text-stroke'></ion-icon>  
         button(class="md:hidden" @click="toggleMenu")
           <ion-icon name="menu-outline" class="text-2xl text-white mt-1.5"></ion-icon> 
-    div(class="fixed inset-y-0 left-0 bg-background z-50 w-64 transform p-5 md:hidden" :class="{ '-translate-x-full': !isMenuOpen }" enter-active-class="transition-transform duration-300")
+    div(class="fixed inset-y-0 left-0 bg-background z-50 w-64 transform p-5 md:hidden  border-r-2" :class="{ '-translate-x-full': !isMenuOpen }" enter-active-class="transition-transform duration-300")
         ul.flex.flex-col.gap-5  
           li 
               NuxtLink(to="/") الرئيسية
