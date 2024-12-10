@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+
   app: {
     head: {
       script: [
@@ -31,10 +32,13 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  modules: ["nuxt-swiper"],
 });

@@ -6,6 +6,7 @@
     FeatureSection
     ExpertSection
     ClientSection
+    
 </template>
 
 <script setup lang="ts"></script>

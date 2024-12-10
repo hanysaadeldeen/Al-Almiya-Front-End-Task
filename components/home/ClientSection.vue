@@ -8,17 +8,38 @@
                 h1(class='text-font font-extrabold text-[40px]')
                   | اراء عملائنا
               div(class="flex flex-row-reverse  items-center justify-start gap-5 ")
-                  div.prev-button(class="rounded-full flex items-center bg-[#D9D9E959] justify-center p-3 cursor-pointer" )
+                  div(class="prev-button rounded-full flex items-center justify-center p-3 cursor-pointer " :disabled="isPrevDisabled"  @click="swiperRef.value?.prev()" :style="{ backgroundColor: isPrevDisabled ? '#D9D9E959' : '#3162DA' }")
                     ion-icon(name="chevron-back-outline" class='text-2xl text-[#ffffff]')
-                  div.next-button( class="rounded-full flex items-center bg-main justify-center p-3 cursor-pointer")
+                  div(class="next-button rounded-full flex items-center justify-center p-3 cursor-pointer " :disabled="isNextDisabled"  @click="swiperRef.value?.next()" :style="{ backgroundColor: isNextDisabled ? '#D9D9E959' : '#3162DA' }" )  
                     ion-icon(name="chevron-forward-outline" class='text-2xl text-[#ffffff]')
-        div.grid.grid-cols-2.gap-5.mt-10
-          ReviewCart
-          ReviewCart
+        Swiper(@swiper="onSwiper" @slideChange="onSlideChange" ref="swiperRef" :pagination="{ dynamicBullets: true }" :slides-per-view="2" :space-between="20")
+              SwiperSlide
+                ReviewCart(name="نرمين علي" company="مؤسس شركة CAS" desc="لقد استدعيت فريق تسريب المياه الخاص بكم لإصلاح تسريب في منزلي، وأنا سعيد جدًا بالخدمة التي تلقيتها. كان الفريق محترفًا وودودًا، وأصلحوا المشكلة بسرعة وبأعلى جودة. أوصي بشدة بخدماتكم.")
+                    img(src='~/assets/img/Ellipse 57.png' alt='client-image' loading='lazy' class='object-contain')   
+              SwiperSlide
+                ReviewCart(name="احمد عامر" company="مؤسس شركة CAS" desc="لقد استدعيت فريق تسريب المياه الخاص بكم لإصلاح تسريب في منزلي، وأنا سعيد جدًا بالخدمة التي تلقيتها. كان الفريق محترفًا وودودًا، وأصلحوا المشكلة بسرعة وبأعلى جودة. أوصي بشدة بخدماتكم.")
+                    img(src='~/assets/img/Ellipse 58.png' alt='client-image' loading='lazy' class='object-contain')   
 </template>
 
 <script setup lang="ts">
-import ReviewCart from "../util/ReviewCart.vue";
-</script>
+import { ref, onMounted } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper-bundle.css";
 
+import ReviewCart from "../util/ReviewCart.vue";
+
+const isPrevDisabled = ref(false);
+const isNextDisabled = ref(false);
+
+const swiperRef = ref(null);
+
+const onSwiper = (swiperInstance: any) => {
+  swiperRef.value = swiperInstance;
+};
+
+const onSlideChange = (swiperInstance: any) => {
+  isPrevDisabled.value = swiperInstance.isBeginning;
+  isNextDisabled.value = swiperInstance.isEnd;
+};
+</script>
 <style scoped></style>

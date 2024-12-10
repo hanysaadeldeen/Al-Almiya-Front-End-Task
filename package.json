@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/image": "^1.8.1",
     "nuxt": "^3.14.1592",
+    "nuxt-swiper": "^2.0.0",
     "vue": "latest",
     "vue-router": "latest"
   },

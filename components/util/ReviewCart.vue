@@ -5,16 +5,24 @@
         <path d="M5.09 12.9085H9.78C9.7 17.5785 8.78 18.3485 5.91 20.0485C5.58 20.2485 5.47 20.6685 5.67 21.0085C5.87 21.3385 6.29 21.4485 6.63 21.2485C10.01 19.2485 11.19 18.0285 11.19 12.2085V6.81852C11.19 5.10852 9.8 3.72852 8.1 3.72852H5.1C3.33 3.72852 2 5.05852 2 6.81852V9.81852C2 11.5785 3.33 12.9085 5.09 12.9085Z" fill="#3162DA"/>
         </svg>
       p.text-justify.font-semibold.text-font.text-base
-        | "لقد استدعيت فريق تسريب المياه الخاص بكم لإصلاح تسريب في منزلي، وأنا سعيد جدًا بالخدمة التي تلقيتها. كان الفريق محترفًا وودودًا، وأصلحوا المشكلة بسرعة وبأعلى جودة. أوصي بشدة بخدماتكم."
+        | {{desc}}
       div.flex.items-center.gap-4
         div(class='rounded-full ')
-          img(src='~/assets/img/Ellipse 57.png' alt='client-image' loading='lazy' class='object-contain')
+          slot
         div
-          h3(class='text-[#040404] font-semibold text-base') احمد عامر
-          p(class='text-subtitle font-medium text-sm')  مؤسس شركة CAS
+          h3(class='text-[#040404] font-semibold text-base') {{name}}
+          p(class='text-subtitle font-medium text-sm')  {{company}}
 
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Props {
+  name?: string;
+  desc?: string;
+  company?: string;
+}
+
+defineProps<Props>();
+</script>
 
 <style scoped></style>
