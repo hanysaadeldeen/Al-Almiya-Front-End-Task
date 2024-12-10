@@ -1,11 +1,11 @@
 <template lang="pug">
-    div(class='flex w-[284px]  items-center pl-5 gap-2')
-      div(class='bg-stroke h-[80px] w-[80px] flex justify-center items-center rounded-full')
+    div(class='flex max-w-[284px]  items-center  gap-2')
+      div(class='bg-stroke h-[80px] min-w-[80px] w-[80px] max-w-[80px] flex justify-center items-center rounded-full')
         slot
       div
-          h3(class='text-[#000000] font-semibold text-xl mb-')
+          h3(class='text-[#000000] font-semibold text-xl ')
             |{{title}}
-          p(class='text-light font-medium text-base') 
+          p(class='text-light text-justify font-medium text-base') 
             | {{desc}} 
 </template>
 

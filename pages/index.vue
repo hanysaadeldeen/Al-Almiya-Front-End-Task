@@ -3,6 +3,7 @@
     HeroSection
     ServiceSection
     TeamSection
+    FeatureSection
 </template>
 
 <script setup lang="ts"></script>
