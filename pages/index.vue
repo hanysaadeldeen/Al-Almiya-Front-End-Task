@@ -4,6 +4,7 @@
     ServiceSection
     TeamSection
     FeatureSection
+    ExpertSection
 </template>
 
 <script setup lang="ts"></script>
