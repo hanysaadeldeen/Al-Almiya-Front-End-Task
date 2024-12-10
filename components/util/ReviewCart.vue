@@ -6,7 +6,7 @@
         </svg>
       p.text-justify.font-semibold.text-font.text-base
         | {{desc}}
-      div.flex.items-center.gap-4
+      div.flex.items-center.gap-4.flex-wrap
         div(class='rounded-full ')
           slot
         div
