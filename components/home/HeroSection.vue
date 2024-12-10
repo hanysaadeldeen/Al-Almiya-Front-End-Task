@@ -23,7 +23,23 @@
       <div
         class="z-10 grid grid-cols-1 lg:grid-cols-3 absolute w-full bottom-0 left-0 gap-4 items-end text-center"
       >
-        <div class="hidden lg:block w-[213px] h-[213px] mb-20">
+        <div class="hidden lg:block relative w-[213px] h-[213px] mb-20">
+          <div
+            class="absolute top-[40%] cursor-pointer left-[40%] w-[46px] h-[46px] bg-main rounded-full z-30 flex items-center justify-center"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.00024 7.55551V17.1255C5.00024 19.0855 7.13024 20.3155 8.83024 19.3355L12.9802 16.9455L17.1302 14.5455C18.8302 13.5655 18.8302 11.1155 17.1302 10.1355L12.9802 7.73551L8.83024 5.34551C7.13024 4.36551 5.00024 5.58551 5.00024 7.55551Z"
+                fill="#F8F8FF"
+              />
+            </svg>
+          </div>
           <img
             src="~/assets/img/Ellipse 53.png"
             alt="Decorative Circle"

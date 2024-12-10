@@ -10,3 +10,9 @@ body {
 .section {
   margin: 15rem 0;
 }
+
+@media (max-width: 768px) {
+  .section {
+    margin: 10rem 0;
+  }
+}
