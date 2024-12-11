@@ -12,6 +12,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: "ar",
+      },
       script: [
         {
           type: "module",
@@ -40,5 +43,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nuxt-swiper"],
+  modules: ["nuxt-swiper", "@pinia/nuxt"],
 });

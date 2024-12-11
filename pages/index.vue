@@ -8,7 +8,7 @@
     ClientSection
     OurServices
     OurMobile
-    
+    PopupContainer
 </template>
 
 <script setup lang="ts"></script>

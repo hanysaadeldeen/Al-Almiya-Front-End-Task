@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(class='expert-section  px-5 section  md:px-24 relative') 
+    div(class='client-section  px-5 section  md:px-24 relative') 
       .container.mx-auto
         div.flex.justify-between.items-start.flex-wrap
               div
@@ -25,8 +25,6 @@
 import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
-
-import ReviewCart from "../util/ReviewCart.vue";
 
 const isPrevDisabled = ref(false);
 const isNextDisabled = ref(false);

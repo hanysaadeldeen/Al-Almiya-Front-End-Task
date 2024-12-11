@@ -52,9 +52,6 @@
         
 </template>
 
-<script setup lang="ts">
-import BaseButton from "../util/BaseButton.vue";
-import ServiceContent from "../util/ServiceContent.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(class='service-section  bg-[#003773] text-white px-5 section  md:px-24 relative') 
+    div(class='ourService-section  bg-[#003773] text-white px-5 section  md:px-24 relative') 
       .container.mx-auto.pt-20(class='')
         div(class='grid grid-cols-1 gap-y-6 xl:gap-x-6 xl:grid-cols-3 justify-between ')
           div(class='flex flex-col  items-start gap-[30px] xl:gap-[132px]')

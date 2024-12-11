@@ -8,7 +8,7 @@
             h1(class='text-font font-extrabold text-[40px]')
               | افضل خبراء لدينا
           BaseButton(title='تواصل معنا ' class='mt-2 sm:mt-0')
-        div(class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10')
+        div(class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10')
           div(class='flex flex-col justify-center items-center gap-5')
             div(class='bg-[#8080800F] rounded-lg pt-2 px-2')
               img(src='~/assets/img/member-02.webp.png' alt='worker-member' loading='lazy' class='w-full h-full object-contain')

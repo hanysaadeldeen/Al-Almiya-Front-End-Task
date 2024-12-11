@@ -13,10 +13,10 @@
         </div>
 
         <div
-          class="bg-[#0A4088] text-white font-normal py-4 px-6 text-base rounded-full flex flex-col justify-center items-center max-w-[336px]"
+          class="bg-[#0A4088] text-white font-normal text-justify p-6 text-base rounded-full max-w-[350px]"
         >
-          <p>نهتم بتلبية احتياجاتكم. سواء كنتم تحتاجون إلى</p>
-          <p>إصلاح أو تركيب أنابيب الماء أو الصرف الصحي.</p>
+          نهتم بتلبية احتياجاتكم. سواء كنتم تحتاجون إلى إصلاح أو تركيب أنابيب
+          الماء أو الصرف الصحي.
         </div>
       </div>
 
