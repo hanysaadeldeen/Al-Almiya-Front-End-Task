@@ -6,6 +6,7 @@
     FeatureSection
     ExpertSection
     ClientSection
+    OurServices
     OurMobile
     
 </template>
