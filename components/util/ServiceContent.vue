@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(class='flex max-w-[284px]  items-center  gap-2')
+    div(class='flex flex-col items-start  max-w-[284px] sm:flex-row  sm:items-center  gap-2')
       div(class='bg-stroke h-[80px] min-w-[80px] w-[80px] max-w-[80px] flex justify-center items-center rounded-full')
         slot
       div

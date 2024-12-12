@@ -1,5 +1,5 @@
 <template>
-  <div class="mobile-section px-5 section md:px-24 relative">
+  <section class="mobile-section px-5 section md:px-24 relative">
     <div class="container mx-auto">
       <div
         class="flex justify-between items-start lg:items-center flex-col lg:flex-row gap-10"
@@ -55,7 +55,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts"></script>

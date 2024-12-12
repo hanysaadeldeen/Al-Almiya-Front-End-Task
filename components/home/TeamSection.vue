@@ -1,13 +1,13 @@
 <template lang="pug">
-    div(class='team-section  px-5 section  md:px-24 relative') 
+    section(class='team-section  px-5 section  md:px-24 relative') 
       .container.mx-auto
         button(class="rounded-full py-3 px-9 text-main font-bold text-base bg-[#3162DA0A]")  
               |  من نحن
         div(class=' flex  flex-wrap justify-between items-center  mt-5')      
           div(class='flex flex-col  justify-between items-start gap-9 mb-8')
-              h1(class='text-font font-extrabold text-[40px]') 
+              h1(class='text-font font-extrabold text-3xl md:text-[40px]') 
                 |أفضل الفنيين الخبراء لخدمتك 
-              div(class='grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-x-5 md:gap-y-10') 
+              div(class='grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-7 md:gap-x-5 md:gap-y-10') 
                   ServiceContent(title='خدمة سريعة' desc="نحرص علي توفير الوصول السريع لخدمتك")
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.333 19.6667H15.9996C15.453 19.6667 14.9996 19.2134 14.9996 18.6667C14.9996 18.1201 15.453 17.6667 15.9996 17.6667H17.333C18.253 17.6667 18.9996 16.9201 18.9996 16.0001V3.66675H7.99962C6.42629 3.66675 4.98625 4.52006 4.21292 5.89339C3.94625 6.37339 3.33297 6.54678 2.85297 6.28011C2.37297 6.01344 2.19959 5.40008 2.46626 4.92008C3.58626 2.92008 5.70629 1.66675 7.99962 1.66675H19.9996C20.5463 1.66675 20.9996 2.12008 20.9996 2.66675V16.0001C20.9996 18.0267 19.3596 19.6667 17.333 19.6667Z" fill="#3162DA"/>

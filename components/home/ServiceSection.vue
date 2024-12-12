@@ -1,11 +1,11 @@
 <template lang="pug">
-    div(class='service-section  px-5 section  md:px-24 relative') 
+    section(class='Service-Section  px-5 section  md:px-24 relative') 
       .container.mx-auto
-        div(class="main relative   h-[390px] bg-stroke w-full rounded-[60px] pt-8 pr-9 pb-12 pl-4 ")
+        div(class="main relative  max-h-[390px]  lg:h-[390px] bg-stroke w-full rounded-[60px] pt-8 pr-9 pb-12 pl-4 ")
           div.flex.flex-col.items-start.justify-between.gap-7
             button(class="rounded-full py-3 px-9 text-main font-bold text-base bg-white")  
               |  خدماتنا
-            h1(class='font-semibold text-[40px] max-w-[600px] ') 
+            h1(class='font-semibold text-2xl md:text-[40px] max-w-[600px] text-justify  leading-[50px]')   
               |    إختر
               span(class='text-main') 
                 | الخدمة 

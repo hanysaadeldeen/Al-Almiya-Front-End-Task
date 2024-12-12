@@ -1,5 +1,5 @@
 <template lang="pug"> 
-    div(class='feature-section  px-5 section  md:px-24 relative') 
+    section(class='feature-section  px-5 section  md:px-24 relative') 
       .container.mx-auto
         div(class='flex  main-content  flex-wrap items-center justify-between gap-14 xl:gap-[103px]')
           div(class='relative w-[438px] h-[397px] hidden md:block')
@@ -8,7 +8,7 @@
           div(class='flex flex-col gap-5 w-full md:max-w-[447px]')
             button(class="rounded-full py-3 px-9 w-fit text-main font-bold text-base bg-[#3162DA0A]")  
               |  خدمة تسريب المياه
-            h1(class='text-font font-extrabold text-[40px]') 
+            h1(class='text-font font-extrabold text-3xl md:text-[40px]') 
                 |إصلاح وتسريب المياه
             p(class=" text-subtitle text-justify  font-medium  text-base")
               | نحن فريق من الخبراء نهتم بتلبية احتياجاتكم في مجال الصيانة . سواء كنتم تحتاجون إلى إصلاح أو تركيب أنابيب الماء أو الصرف الصحي، أو تركيب أجهزة الحمام والمطبخ، فإننا هنا لنساعدكم. نحن نقدم خدماتنا للعملاء في جميع أنحاء المدينة  ونضمن لكم جودة العمل والموثوقية في كل مشروع نقوم به.

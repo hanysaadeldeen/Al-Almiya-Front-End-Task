@@ -1,11 +1,11 @@
 <template>
-  <div class="hero-section bg-background px-5 pt-12 md:px-24 relative">
+  <section class="hero-section bg-background px-5 pt-12 md:px-24 relative">
     <div class="container mx-auto h-full relative overflow-x-hidden">
       <div
         class="z-30 relative flex flex-col md:flex-row items-start justify-between gap-10"
       >
         <div
-          class="text-white font-extrabold text-[32px] max-w-[367px] leading-[47px]"
+          class="text-white font-extrabold text-2xl md:text-[32px] max-w-[367px] leading-[47px]"
         >
           <p>مرحبًا بكم في موقعنا الخاص</p>
           <p>بخدمات كشف العوازل</p>
@@ -13,7 +13,7 @@
         </div>
 
         <div
-          class="bg-[#0A4088] text-white font-normal text-justify p-6 text-base rounded-full max-w-[350px]"
+          class="hidden sm:block bg-[#0A4088] text-white font-normal text-justify p-6 text-base rounded-full max-w-[350px]"
         >
           نهتم بتلبية احتياجاتكم. سواء كنتم تحتاجون إلى إصلاح أو تركيب أنابيب
           الماء أو الصرف الصحي.
@@ -145,7 +145,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts"></script>
