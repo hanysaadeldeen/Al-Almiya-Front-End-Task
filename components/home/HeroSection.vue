@@ -25,6 +25,7 @@
       >
         <div class="hidden lg:block relative w-[213px] h-[213px] mb-20">
           <div
+            v-if="!isVideoVisible"
             class="absolute top-[40%] cursor-pointer left-[40%] w-[46px] h-[46px] bg-main rounded-full z-30 flex items-center justify-center"
           >
             <svg
@@ -33,6 +34,7 @@
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              @click="toggleVideo"
             >
               <path
                 d="M5.00024 7.55551V17.1255C5.00024 19.0855 7.13024 20.3155 8.83024 19.3355L12.9802 16.9455L17.1302 14.5455C18.8302 13.5655 18.8302 11.1155 17.1302 10.1355L12.9802 7.73551L8.83024 5.34551C7.13024 4.36551 5.00024 5.58551 5.00024 7.55551Z"
@@ -40,18 +42,32 @@
               />
             </svg>
           </div>
+          <div
+            v-if="isVideoVisible"
+            class="w-[213px] h-[213px] rounded-full overflow-hidden"
+          >
+            <video
+              :src="slider?.video"
+              class="w-full h-full object-cover"
+              @ended="resetToImage"
+              autoplay
+            />
+          </div>
           <img
+            v-else
             src="~/assets/img/Ellipse 53.png"
             alt="Decorative Circle"
             class="w-full h-full"
             loading="lazy"
           />
         </div>
-
-        <div class="relative mx-auto max-w-[400px] z-10">
-          <div
+        <div
+          class="relative mx-auto max-w-[400px] z-10"
+          v-if="slider && slider.big_image"
+        >
+          <!-- <div
             class="absolute -top-10 w-full h-full max-w-[400px] bg-gradient-to-b from-[#3265E226] to-[#FFFFFF00] rounded-t-[55px]"
-          ></div>
+          ></div> -->
           <div
             class="backImgUrl absolute max-w-[192px] w-[192px] h-[139px] p-3 top-1/2 lg:top-1/4 left-0 lg:-left-32 z-20"
           >
@@ -114,13 +130,12 @@
             </div>
           </div>
           <img
-            src="~/assets/img/Heros-02.png"
+            :src="slider?.big_image"
             alt="Worker"
             class="w-full z-10 relative"
             loading="lazy"
           />
         </div>
-
         <div class="hidden lg:flex justify-end mb-20">
           <div
             class="bg-main rounded-full w-24 h-24 flex justify-center items-center"
@@ -148,7 +163,25 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Props {
+  slider: {
+    big_image: string;
+    id: number;
+    image: string;
+    video: string;
+  };
+}
+defineProps<Props>();
+const isVideoVisible = ref(false);
+const toggleVideo = () => {
+  isVideoVisible.value = !isVideoVisible.value;
+};
+
+const resetToImage = () => {
+  isVideoVisible.value = false;
+};
+</script>
 
 <style scoped>
 .hero-section {

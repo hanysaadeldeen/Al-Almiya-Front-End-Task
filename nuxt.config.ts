@@ -44,4 +44,10 @@ export default defineNuxtConfig({
   },
 
   modules: ["nuxt-swiper", "@pinia/nuxt"],
+
+  runtimeConfig: {
+    public: {
+      apiBase: "https://leak-detection.phpv8.aait-d.com/api/website/",
+    },
+  },
 });

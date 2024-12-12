@@ -1,6 +1,8 @@
 <template>
   <div v-if="visible" class="popup-overlay">
-    <div class="popup-content max-h-[734px] overflow-y-auto">
+    <div
+      class="popup-content max-sm:max-h-[500px] sm:max-h-[600px] xl:max-h-[734px] overflow-y-auto"
+    >
       <div class="cursor-pointer w-fit" @click="$emit('close')">
         <svg
           width="16"
@@ -15,7 +17,7 @@
           />
         </svg>
       </div>
-      <div class="px-7 mx-3">
+      <div class="lg:px-7 lg:mx-3">
         <slot></slot>
       </div>
     </div>
@@ -61,7 +63,7 @@ $input-padding: 20px;
   padding: 2rem;
   border-radius: $popup-border-radius;
   max-width: $popup-width;
-  width: 100%;
+  width: 90%;
   position: relative;
 
   h2 {

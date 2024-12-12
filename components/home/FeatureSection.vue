@@ -2,9 +2,9 @@
     section(class='feature-section  px-5 section  md:px-24 relative') 
       .container.mx-auto
         div(class='flex  main-content  flex-wrap items-center justify-between gap-14 xl:gap-[103px]')
-          div(class='relative w-[438px] h-[397px] hidden md:block')
+          div(v-if='homeServices && homeServices[0]' class='relative w-[438px] h-[397px] hidden md:block')
             div(class='bg-stroke rounded-[20px] absolute top-0 left-0 max-w-[436.68px] w-[436.68px] h-[397.84px] max-h-[397.84px]  transform -rotate-[14deg] ')
-            img(src='~/assets/img/Rectangle 4455.png' loading='lazy' alt='worker-for-solve' class='w-full h-full object-contain rounded-[20px] relative z-10')
+            img( :src='homeServices[0]?.image' loading='lazy' alt='worker-for-solve' class='w-full h-full object-contain rounded-[20px] relative z-10')
           div(class='flex flex-col gap-5 w-full md:max-w-[447px]')
             button(class="rounded-full py-3 px-9 w-fit text-main font-bold text-base bg-[#3162DA0A]")  
               |  خدمة تسريب المياه
@@ -32,11 +32,21 @@
                   p.text-font.font-medium.text-base 
                     | تقديم خدمات عالية الجودة ونضمن رضا العملاء
             BaseButton(title='تواصل معنا ' class='w-fit mt-2')
-            
-
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Service {
+  id: number;
+  title: string;
+  sub_title: string;
+  image: string;
+  desc: string;
+}
+interface Props {
+  homeServices: Service[];
+}
+defineProps<Props>();
+</script>
 
 <style scoped>
 @media (max-width: 1150px) {

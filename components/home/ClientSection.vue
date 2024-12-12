@@ -12,12 +12,12 @@
         h1(class='text-font font-extrabold  text-3xl mb-5 mt-3 md:mt-0 md:text-[40px]')
           | اراء عملائنا
         Swiper(@swiper="onSwiper" @slideChange="onSlideChange" ref="swiperRef" :pagination="{ dynamicBullets: true }" :breakpoints="{968: { slidesPerView: 2}}" :slides-per-view="1" :space-between="20")
-              SwiperSlide
+              SwiperSlide(v-if='testimonials')
                 ReviewCart(name="احمد عامر" company="مؤسس شركة CAS" desc="لقد استدعيت فريق تسريب المياه الخاص بكم لإصلاح تسريب في منزلي، وأنا سعيد جدًا بالخدمة التي تلقيتها. كان الفريق محترفًا وودودًا، وأصلحوا المشكلة بسرعة وبأعلى جودة. أوصي بشدة بخدماتكم.")
-                    img(src='~/assets/img/Ellipse 57.png' alt='client-image' loading='lazy' class='object-contain')   
-              SwiperSlide
+                    img(v-if='testimonials[0]?.image' :src='testimonials[0]?.image' alt='client-image' loading='lazy' class='object-contain')   
+              SwiperSlide(v-if='testimonials')
                 ReviewCart(name="نرمين علي" company="مؤسس شركة CAS" desc="لقد استدعيت فريق تسريب المياه الخاص بكم لإصلاح تسريب في منزلي، وأنا سعيد جدًا بالخدمة التي تلقيتها. كان الفريق محترفًا وودودًا، وأصلحوا المشكلة بسرعة وبأعلى جودة. أوصي بشدة بخدماتكم.")
-                    img(src='~/assets/img/Ellipse 58.png' alt='client-image' loading='lazy' class='object-contain')   
+                    img(v-if='testimonials[1]?.image' :src='testimonials[1]?.image' alt='client-image' loading='lazy' class='object-contain')   
 </template>
 
 <script setup lang="ts">
@@ -38,5 +38,17 @@ const onSlideChange = (swiperInstance: any) => {
   isPrevDisabled.value = swiperInstance.isBeginning;
   isNextDisabled.value = swiperInstance.isEnd;
 };
+
+interface testimonial {
+  id: number;
+  name: string;
+  job: string;
+  desc: string;
+  image: string;
+}
+interface Props {
+  testimonials: testimonial[];
+}
+defineProps<Props>();
 </script>
 <style scoped></style>
